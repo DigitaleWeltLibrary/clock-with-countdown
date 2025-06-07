@@ -1,0 +1,31 @@
+.clock {
+    background: #A0A0A0;
+    border: #03DAC6 solid 4px;
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 1fr 0.25fr 1fr;
+    place-items: center;
+    border-radius: 1.5rem;
+    width: min(calc(100dvw - 2rem), 900px);
+
+    &>p {
+        font-size: 2rem;
+    }
+
+
+
+    div {
+        text-align: center;
+
+        h2 {
+            font-size: 4rem;
+        }
+
+        p {
+            color: #03DAC6;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+        }
+    }
+
+}
