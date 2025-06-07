@@ -7,6 +7,7 @@
     place-items: center;
     border-radius: 1.5rem;
     width: min(calc(100dvw - 2rem), 900px);
+    position: relative;
 
     &>p {
         font-size: 2rem;
@@ -28,4 +29,29 @@
         }
     }
 
+    .setcountdown {
+        position: absolute;
+        top: -35px;
+        right: 50px;
+        font-size: .75rem;
+        border: #03DAC6 solid 4px;
+        border-bottom: none;
+        border-radius: 1rem 1rem 0 0;
+        padding: 7px 7px 2px 7px;
+        font-size: 1rem;
+        display: flex;
+        color: #03DAC6;
+        background: #a0a0a09f;
+        opacity: .5;
+        cursor: pointer;
+        transition: 500ms all;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        svg {
+            margin-right: .5rem;
+        }
+    }
 }
