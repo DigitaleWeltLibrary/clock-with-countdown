@@ -56,6 +56,10 @@ export default function Countdown({ gettimecountdown, settimecountdown }) {
         return deStandard
     }
 
+    const delcountdown = () => {
+        settimecountdown(false)
+        localStorage.removeItem("timecountdown")
+    }
 
     return (
         <section className={style.countdown}>
@@ -84,7 +88,7 @@ export default function Countdown({ gettimecountdown, settimecountdown }) {
             </section>
 
             <p>{readabledate(gettimecountdown)} - <span
-                onClick={() => settimecountdown(false)}
+                onClick={delcountdown}
             >delete countdown</span></p>
         </section>
     )
