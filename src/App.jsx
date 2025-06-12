@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Clock from './components/Clock.jsx'
 import CreateCountdown from './components/CreateCountdown.jsx'
+import Countdown from './components/Countdown.jsx'
 
 export default function App() {
 
@@ -19,7 +20,9 @@ export default function App() {
               settimecountdown={settimecountdown}
               setcreatetimer={setcreatetimer}
             /> :
-            "nein") :
+            <Countdown
+              gettimecountdown={gettimecountdown}
+            />) :
           null
       }
     </main>

@@ -1,0 +1,37 @@
+.countdown {
+    margin: .5rem auto 0;
+    background: #A0A0A0;
+    border: #03DAC6 solid 4px;
+    padding: .5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    width: min(calc(100dvw - 4rem), calc(900px - 4rem));
+    display: block;
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: .5rem;
+    }
+
+
+    section {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr;
+        place-items: center;
+
+        div {
+
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                color: #03DAC6;
+                text-transform: uppercase;
+                font-size: 1rem;
+            }
+        }
+    }
+}
