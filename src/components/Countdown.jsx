@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import style from "../style/countdown.module.scss"
 
 
-export default function Countdown({ gettimecountdown }) {
+export default function Countdown({ gettimecountdown, settimecountdown }) {
 
     const [getcountdown, setCountdown] = useState({
         days: "00",
@@ -50,6 +50,12 @@ export default function Countdown({ gettimecountdown }) {
 
     let { days, hours, minutes, seconds } = getcountdown
 
+    const readabledate = (datetime) => {
+        const dateObject = new Date(datetime)
+        const deStandard = dateObject.toLocaleString('de-DE')
+        return deStandard
+    }
+
 
     return (
         <section className={style.countdown}>
@@ -76,6 +82,10 @@ export default function Countdown({ gettimecountdown }) {
                     <p>Seconds</p>
                 </div>
             </section>
+
+            <p>{readabledate(gettimecountdown)} - <span
+                onClick={() => settimecountdown(false)}
+            >delete countdown</span></p>
         </section>
     )
 }

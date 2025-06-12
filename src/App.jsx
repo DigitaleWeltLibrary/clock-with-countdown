@@ -19,8 +19,9 @@ export default function App() {
             <CreateCountdown
               settimecountdown={settimecountdown}
               setcreatetimer={setcreatetimer}
-            /> :
-            <Countdown
+              /> :
+              <Countdown
+              settimecountdown={settimecountdown}
               gettimecountdown={gettimecountdown}
             />) :
           null

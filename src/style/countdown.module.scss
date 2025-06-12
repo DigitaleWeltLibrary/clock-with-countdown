@@ -34,4 +34,19 @@
             }
         }
     }
+
+    p:not(section section p) {
+        text-align: center;
+        margin-block: .5rem .25rem;
+        opacity: .5;
+
+        span {
+            cursor: pointer;
+            transition: 500ms all;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
 }
