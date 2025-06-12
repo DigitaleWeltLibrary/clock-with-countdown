@@ -13,7 +13,7 @@ export default function App() {
   })
 
   useEffect(() => {
-    if (gettimecountdown !== null) {
+    if (gettimecountdown !== null && gettimecountdown !== false) {
       localStorage.setItem("timecountdown", gettimecountdown);
     }
   }, [gettimecountdown]);
