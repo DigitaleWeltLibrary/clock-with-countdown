@@ -1,0 +1,64 @@
+.createcountdown {
+    margin: .5rem auto 0;
+    background: #A0A0A0;
+    border: #03DAC6 solid 4px;
+    padding: .5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    width: min(calc(100dvw - 4rem), calc(900px - 4rem));
+    display: block;
+
+    section {
+        &:has(h2) {
+            justify-content: center;
+            display: flex;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                font-size: 1.5rem;
+                font-weight: bold;
+                background: transparent;
+                margin-left: .25rem;
+                border-width: 0 0 2px 0;
+                cursor: pointer;
+                transition: 500ms all;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+
+        }
+
+        &:not(&:has(h2)) {
+
+            margin: .75rem 0 .5rem;
+            display: grid;
+            grid-template-columns: 1fr max(15%, 100px);
+
+            input {
+                border: #03DAC6 2px solid;
+                padding: .5rem;
+                border-radius: 10px 0 0 10px;
+            }
+
+            button {
+                border: #03DAC6 2px solid;
+                padding: .5rem;
+                border-left: none;
+                font-size: 1.1rem;
+                cursor: pointer;
+                transition: 500ms all;
+                border-radius: 0 10px 10px 0;
+
+                &:hover {
+                    background: #03dac52a;
+                }
+            }
+        }
+    }
+}

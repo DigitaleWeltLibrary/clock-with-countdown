@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import Clock from './components/Clock.jsx'
+import CreateCountdown from './components/CreateCountdown.jsx'
 
 export default function App() {
 
   const [getcreatetimer, setcreatetimer] = useState(false)
+  const [gettimecountdown, settimecountdown] = useState(false)
 
   return (
     <main>
@@ -11,7 +13,14 @@ export default function App() {
         setcreatetimer={setcreatetimer}
       />
       {
-        getcreatetimer ? "ja" : "nein"
+        getcreatetimer || gettimecountdown != false ?
+          (getcreatetimer ?
+            <CreateCountdown
+              settimecountdown={settimecountdown}
+              setcreatetimer={setcreatetimer}
+            /> :
+            "nein") :
+          null
       }
     </main>
   )
