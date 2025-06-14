@@ -4,7 +4,7 @@ import style from "../style/countdown.module.scss"
 
 
 export default function Countdown({ gettimecountdown, settimecountdown }) {
-
+    /* NOTE initial state with time object */
     const [getcountdown, setCountdown] = useState({
         days: "00",
         hours: "00",
@@ -12,9 +12,11 @@ export default function Countdown({ gettimecountdown, settimecountdown }) {
         seconds: "00"
     });
 
+    /* NOTE add zero to numbers less than 10 */
     const addZero = (num) =>
         num < 10 ? '0' + num : '' + num;
 
+    /* NOTE get date difference */
     const getDateDifference = (date1, date2) => {
 
         if (!(date1 instanceof Date) || isNaN(date1.getTime()) || !(date2 instanceof Date) || isNaN(date2.getTime())) {
@@ -37,6 +39,7 @@ export default function Countdown({ gettimecountdown, settimecountdown }) {
         };
     }
 
+    /* NOTE update countdown every second */
     useEffect(() => {
         const timerId = setInterval(
             () => {
@@ -48,14 +51,17 @@ export default function Countdown({ gettimecountdown, settimecountdown }) {
         return () => clearInterval(timerId)
     }, [gettimecountdown])
 
+    /* NOTE destructure countdown object */
     let { days, hours, minutes, seconds } = getcountdown
 
+    /* NOTE readable date to display in the UI */
     const readabledate = (datetime) => {
         const dateObject = new Date(datetime)
         const deStandard = dateObject.toLocaleString('de-DE')
         return deStandard
     }
 
+    /* NOTE delete countdown */
     const delcountdown = () => {
         settimecountdown(false)
         localStorage.removeItem("timecountdown")

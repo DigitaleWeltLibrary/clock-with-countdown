@@ -4,9 +4,10 @@ import style from "../style/clock.module.scss"
 import ShowCreateTimer from "./ShowCreateTimer"
 
 export default function clock({ setcreatetimer }) {
-
+    /* NOTE create state with current date */
     const [getcurrenttime, setcurrenttime] = useState(new Date())
 
+    /* NOTE updates the state after one second to have the current date in the state */
     useEffect(() => {
         const timerId = setInterval(
             () => {
@@ -17,8 +18,10 @@ export default function clock({ setcreatetimer }) {
         return () => clearInterval(timerId)
     }, [])
 
+    /* NOTE add zero to single digits */
     const addzero = (num) => num < 10 ? `0${num}` : num
 
+    /* NOTE split current time to hours, ... */
     const hours = addzero(getcurrenttime.getHours())
     const minutes = addzero(getcurrenttime.getMinutes())
     const seconds = addzero(getcurrenttime.getSeconds())

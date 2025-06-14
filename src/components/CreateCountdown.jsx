@@ -1,11 +1,14 @@
-import {  useState } from "react"
+import { useState } from "react"
 import style from "../style/CreateCountdown.module.scss"
 
 export default function CreateCountdown({ settimecountdown, setcreatetimer }) {
-
+    /* NOTE to change cowndowntype: today | otherday  */
     const [getcowndowntoday, setcowndowntoday] = useState(true)
+    
+    /* NOTE saves the date of the countdown while it isn't submitted */
     const [gettimedate, settimedate] = useState(null)
 
+    /* NOTE transforms input into datetime and save it into state*/
     const handleDateTimeInput = (e) => {
         const value = e.target.value;
         const inputType = e.target.type;
