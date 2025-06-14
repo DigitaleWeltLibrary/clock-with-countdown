@@ -1,52 +1,55 @@
-# Clock with countdown
+![assets/image.png](assets/image.png)
 
-![alt text](assets/image.png)
+# Clock with Countdown
 
-## simple clock
+A simple and customizable browser clock with an integrated countdown feature. Countdown times are saved locally, ensuring they persist even after you close the tab.
 
-A simple clock which you can use to see the current time in your browser tap. You can also set countdown which get saved into localStorage to be save when you accidently close the tap.
+## Simple Clock
 
-## countdown
+A straightforward clock that allows you to see the current time in your browser tab. You can also set countdowns, which are saved to **localStorage** to ensure they're safe if you accidentally close the tab.
 
-### Create a countdown
+## Countdown
 
-Klick on the the small box named SET COUNTDOWN on the right top of the clock. A box apears to create the countdown.
+### Create a Countdown
 
-![alt text](assets/image2.png)
+Click on the small box labeled **SET COUNTDOWN** on the top right of the clock. A box will appear, allowing you to create the countdown.
 
-When you click on the underlind word you can chnage the coundwon between **today** and **an other day**. Click on the button to create the button. (The countdown gets saved to the local Storage and appears as well when you close the tap and open it again.) The coundown is shown under the clock.
+![assets/image2.png](assets/image2.png)
 
-![alt text](assets/image3.png)
+When you click on the underlined word, you can change the countdown between **today** and **another day**. Click the button to create the countdown. (The countdown is saved to **localStorage** and will reappear even if you close and reopen the tab.) The countdown is shown below the clock.
 
-### good to know
+![assets/image3.png](assets/image3.png)
 
-- You can see when the timer ends when you look at the bottom of the box.
-- Next to it you can delite the coundown with clicking on **delete countdown**
-- When you create a new countdown while a coundown is running it gets replaced with the new one
+### Good to Know
 
-## So you can clone the project
+  * You can see the exact end time of the countdown at the bottom of its box.
+  * Next to it, you can **delete** the countdown by clicking on **delete countdown**.
+  * If you create a new countdown while one is already running, the existing one will be replaced with the new one.
 
-- First you copy the github download link
+## How to Clone and Run the Project
 
-```bash
-git clone https://github.com/DigitaleWeltLibrary/clock-with-countdown
-```
+1.  First, copy the GitHub download link.
 
-- Then you have cloned the repository in your directory
-- After that you have to install the node packages
+    ```bash
+    git clone https://github.com/DigitaleWeltLibrary/clock-with-countdown
+    ```
 
-```bash
-npm install
-```
+2.  Then, the repository will be cloned into your directory.
 
-- you are ready to start the app
+3.  After that, you need to install the Node.js packages.
 
-```bash
-npm run dev
-```
+    ```bash
+    npm install
+    ```
 
-## Used techniques
+4.  You're now ready to start the app\!
 
-- vite
-- react
-- FontAwesomeIcon
+    ```bash
+    npm run dev
+    ```
+
+## Used Technologies
+
+  * Vite
+  * React
+  * FontAwesomeIcon
