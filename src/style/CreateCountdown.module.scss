@@ -56,7 +56,11 @@
                 transition: 500ms all;
                 border-radius: 0 10px 10px 0;
 
-                &:hover {
+                &:disabled {
+                    cursor: not-allowed;
+                }
+
+                &:hover:not(&:disabled) {
                     background: #03dac52a;
                 }
             }
